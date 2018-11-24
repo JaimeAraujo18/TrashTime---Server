@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="jumbotron bg-gray">
 			<?php if (null == $this->session->userdata("nome")){
-				redirect(base_url('/usuario/login'));
+				redirect(base_url('/usuario'));
 			}else{ ?>
 				<p class="bg-light text-dark">bairro</p>
 			<?php } ?>

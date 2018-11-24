@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuario extends CI_Controller {
 
-	public function login()
+	public function index()
 	{
 		$dados['titulo']='Login - TrashTime.';
 
@@ -27,13 +27,13 @@ class Usuario extends CI_Controller {
 			redirect(base_url("/home"));
 		}else{
 			$this->session->set_flashdata("danger", "Usuário ou senha inválidos!");
-			redirect(base_url("/login"));
+			redirect(base_url("/usuario"));
 		}
 	}
 
 	public function logout()
 		{
 			$this->session->sess_destroy();
-			redirect(base_url("/login"));
+			redirect(base_url("/usuario"));
 		}
 }

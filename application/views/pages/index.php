@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="jumbotron bg-gray">
 			<div class="row text-center">
-			<?php if (null == $this->session->userdata("nome")) redirect(base_url('/usuario/login')); ?>
-				<p class="col display-4 text-light ">Bem vindo <?= $this->session->userdata("nome")?>!</p>
+			<?php if (null == $this->session->userdata("nome")) redirect(base_url('/usuario')); ?>
+				<p class="col display-4">Bem vindo <?= $this->session->userdata("nome")?>!</p>
 			</div>
 			<hr class="my-4 bg-light">
 			<div class="row">

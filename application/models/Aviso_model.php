@@ -7,10 +7,14 @@ class Aviso_model extends CI_Model
 {
 	public function listarAvisos()
 	{
-		return $this->db->get('aviso')->result_array();
+		$result = $this->db->get('aviso')->result_array();
+		if ($result == null) {
+			$result['nulo']=true;
+		}
+		return $result;
 	}
 
-	public function novoAviso($aviso)
+	public function inserirAviso($aviso)
 	{
 		$this->db->insert("aviso", $aviso);
 		$this->session->set_flashdata("success", "Aviso inserido com successo!");

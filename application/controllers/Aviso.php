@@ -11,6 +11,7 @@ class Aviso extends CI_Controller {
 	public function index()
 	{
 		$dados['titulo']='Avisos - TrashTime.';
+		$dados['avisos']=$this->Aviso_model->listarAvisos();
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
@@ -27,5 +28,6 @@ class Aviso extends CI_Controller {
 			"data_fim"=>$this->input->post("dataFim"),
 			"bairro_id"=>$this->input->post("bairroID")
 		);
+		inserirAviso($aviso);
 	}
 }
