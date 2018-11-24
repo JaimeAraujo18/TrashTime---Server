@@ -1,15 +1,3 @@
-<?php
-
-$dir="";
-
-if ($_SERVER['SERVER_NAME']=='SITE.COM.BR') {
-	$dir='/';
-}else if ($_SERVER['SERVER_NAME']=='localhost') {
-	$dir = "/trashtime";
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

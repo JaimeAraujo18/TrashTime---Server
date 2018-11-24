@@ -15,6 +15,25 @@ class Usuario extends CI_Controller {
 	}
 	public function login_usuario()
 	{
-		//validação
+		$this->load->model("Usuario_model");
+
+		$username = $this->input->post("username");
+		$password = SHA1($this->input->post("password"));
+		$usuario = $this->Usuario_model->logar($username, $password);
+		if ($usuario) {
+			$this->session->set_userdata($usuario);
+			$this->session->set_flashdata("success",
+				"Login efetuado com successo, bem vindo ".$this->session->userdata("usuario['nome']"."!"));
+			redirect(base_url("/home"));
+		}else{
+			$this->session->set_flashdata("danger", "Usuário ou senha inválidos!");
+			redirect(base_url("/login"));
+		}
 	}
+
+	public function logout()
+		{
+			$this->session->sess_destroy();
+			redirect(base_url("/login"));
+		}
 }
