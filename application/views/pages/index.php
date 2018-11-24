@@ -5,6 +5,7 @@
 			<?php if (null == $this->session->userdata("nome")) redirect(base_url('/usuario/login')); ?>
 				<p class="col display-4 text-light ">Bem vindo <?= $this->session->userdata("nome")?>!</p>
 			</div>
+			<hr class="my-4 bg-light">
 			<div class="row">
 				<a class="col" href="<?= base_url('/aviso') ?>">
 					<div class="col-md-12 btn btn-default bg-light">

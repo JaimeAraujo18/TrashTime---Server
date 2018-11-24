@@ -5,7 +5,7 @@ class Aviso extends CI_Controller {
 
 	public function __construct (){
 		parent::__construct();
-		$this->load->model("Aviso_modelo");
+		$this->load->model("Aviso_model");
 	}
 
 	public function index()

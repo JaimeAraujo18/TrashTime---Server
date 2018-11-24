@@ -1,35 +1,32 @@
-<div class="page-content minheight">
-	<div class="container">
-		<div class="jumbotron bg-gray">
-			<?php if (null == $this->session->userdata("nome")){
-				redirect(base_url('/usuario/login'));
-			}else{ ?>
-				<h2 class="text-light display-4">Cadastro de Aviso:</h2>
-				<hr class="my-4 bg-light">
-				<form action="<?= base_url('/aviso/insert') ?>" method="post">
-					<div class="form-group">
-						<label class="text-light" for="titulo">Título do aviso:</label><br>
-						<input type="text" class="form-controll col-md-12" id="titulo" name="titulo" required>
-					</div>
-					<div class="form-group">
-						<label class="text-light" for="texto">Texto:</label><br>
-						<textarea type="text" class="form-controll col-md-12" id="texto" name="texto" required/>
-					</div>
-					<div class="form-group">
-						<label class="text-light" for="dataInicio">Data de início:</label><br>
-						<input type="text" class="form-controll col-md-12" id="dataInicio" name="dataInicio" placeholder="dd/mm/aaaa" required>
-					</div>
-					<div class="form-group">
-						<label class="text-light" for="dataFim">Data de Término:</label><br>
-						<input type="text" class="form-controll col-md-12" id="dataFim" name="dataFim" placeholder="dd/mm/aaaa" required>
-					</div>
-					<div class="form-group">
-						<label class="text-light" for="bairroID">ID do bairro:</label><br>
-						<input type="text" class="form-controll col-md-12" id="bairroID" name="bairroID" required>
-					</div>
-					<button type="submit" class="btn btn-danger col-md-12">Enviar</button>
-				</form>
-			<?php } ?>
-		</div>
-	</div>
-</div>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Título</th>
+			<th scope="col">Texto</th>
+			<th scope="col">Data de início</th>
+			<th scope="col">Data de fim</th>
+			<th scope="col">ID do bairro</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php
+		foreach ($avisos as $aviso) { ?>
+			<tr>
+      			<th scope='row'><?= $aviso['id'] ?></th>
+			    <td><?= character_limiter($aviso['titulo'],50) ?></td>
+			    <td><?= character_limiter($aviso['texto'], 50) ?></td>
+			    <td><?= dateFormat('d-m-Y',$aviso['data_inicio']) ?></td>
+			    <td><?= dateFormat('d-m-Y',$aviso['data_fim']) ?></td>
+			    <td><?= $aviso['bairro_id'] ?></td>
+			    <td>
+			    	<button class="btn btn-danger btn-sm"></button>
+			    	<button class="btn btn-danger btn-sm"></button>
+			    </td>
+    		</tr>
+		<? endforeach ?>
+
+
+		?>
+	</tbody>
+</table>
