@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		$this->load->model('Cidade_model');
 		$this->load->model('Usuario_model');
 
-		$dados['titulo']	=	'Home - TrashTime.';
+		$dados['titulo']	=	'Home - TrashTime';
 		$dados['bairros']	=	$this->Bairro_model->listarBairros();
 		$dados['cidades']	=	$this->Cidade_model->listarCidades();
 

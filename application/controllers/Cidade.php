@@ -5,7 +5,7 @@ class Cidade extends CI_Controller {
 
 	public function index()
 	{
-		$dados['titulo']='Cidades - TrashTime.';
+		$dados['titulo']='Cidades - TrashTime';
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);

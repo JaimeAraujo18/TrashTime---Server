@@ -3,3 +3,6 @@
 .bg-black-{background-color: #212020;}
 .bg-gray{background-color: #191919}
 body,a{color: #f8f9fa !important;}
+#td{border-top: 0px !important; width: 108%;}
+#btn{margin-left: -1.5%}
+textarea{}

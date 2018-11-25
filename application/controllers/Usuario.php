@@ -5,7 +5,7 @@ class Usuario extends CI_Controller {
 
 	public function index()
 	{
-		$dados['titulo']='Login - TrashTime.';
+		$dados['titulo']='Login - TrashTime';
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);

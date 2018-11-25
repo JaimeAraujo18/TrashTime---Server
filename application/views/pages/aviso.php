@@ -1,43 +1,19 @@
 <div class="page-content minheight">
 	<div class="container">
 		<div class="jumbotron bg-gray">
+		<?php if (null == $this->session->userdata("nome")){
+			redirect(base_url('/usuario'));
+		}else{ ?>
+			<div class="row">
+				<p class="col-md-10"></p>
+				<a href="<?= base_url('/aviso/formAviso'); ?>" id='btn' class="col-md-2 float-right btn btn-primary btn-lg">Novo aviso</a>
+			</div>
 			<?php if (isset($nulo)){
 				echo "<div class='row'><h2 class='display-4 col'>Nenhum aviso disponível:</h2></div>";
-				$hide=true;
+				$hide="";
 			}
-			if (!isset($hide)) { ?>
-				<table class="table">
-				  <thead class="thead-dark">
-				    <tr>
-				      <th scope="col">ID</th>
-				      <th scope="col">First</th>
-				      <th scope="col">Last</th>
-				      <th scope="col">Handle</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th scope="row">1</th>
-				      <td>Mark</td>
-				      <td>Otto</td>
-				      <td>@mdo</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">2</th>
-				      <td>Jacob</td>
-				      <td>Thornton</td>
-				      <td>@fat</td>
-				    </tr>
-				    <tr>
-				      <th scope="row">3</th>
-				      <td>Larry</td>
-				      <td>the Bird</td>
-				      <td>@twitter</td>
-				    </tr>
-				  </tbody>
-				</table>
-
-				<div class="table-responsive">
+			if (!isset($hide)) { ?>				
+				<br><div class="table-responsive">
 					<table class="table table-sm table-striped">
 						<thead class="thead-light">
 							<tr>
@@ -60,17 +36,19 @@
 								<td>".dateFormat('d-m-Y',$aviso['data_inicio'])."</td>
 								<td>".dateFormat('d-m-Y',$aviso['data_fim'])."</td>
 								<td>".$aviso['bairro_id']."</td>
-								<td>
-									<a href='".base_url('/aviso/excluir')."' class='btn btn-danger btn-sm'>Excluir</a>
-									<a href='".base_url('/aviso/editar')."' class='btn btn-primary btn-sm'>Editar</a>
+								<td class='row' id='td'>
+									<a href='".base_url('/aviso/excluir/'.$aviso['id'])."' class='ml-3 btn btn-danger btn-sm'>Excluir</a>
+									<a href='".base_url('/aviso/editar/'.$aviso['id'])."' class='ml-4 btn btn-primary btn-sm'>Editar</a>
 							    </td>
 				    		</tr>";
+				    		// $something = $this->input->get('something'); get da url
 				    	}?>
 						</tbody>
 					</table>
-			</div>
+				</div>
 				
 			<?php } ?>
+		<?php } ?>
 		</div>
 	</div>
 </div>

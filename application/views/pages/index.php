@@ -8,17 +8,17 @@
 			<hr class="my-4 bg-light">
 			<div class="row">
 				<a class="col" href="<?= base_url('/aviso') ?>">
-					<div class="col-md-12 btn btn-default bg-light">
+					<div class="col-md-12 btn btn-secondary">
 						<p class="mx-2 my-3 nav-link">Gerenciar Avisos</p>
 					</div>
 				</a>
 				<a class="col" href="<?= base_url('/bairro') ?>">
-					<div class="col-md-12 btn btn-default bg-light">
+					<div class="col-md-12 btn btn-secondary">
 						<p class="mx-2 my-3 nav-link">Gerenciar Bairros</p>
 					</div>
 				</a>
 				<a class="col" href="<?= base_url('/cidade') ?>">
-					<div class="col-md-12 btn btn-default bg-light">
+					<div class="col-md-12 btn btn-secondary">
 						<p class="mx-2 my-3 nav-link">Gerenciar Cidades</p>
 					</div>
 				</a>

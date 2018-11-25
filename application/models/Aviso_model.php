@@ -7,17 +7,18 @@ class Aviso_model extends CI_Model
 {
 	public function listarAvisos()
 	{
-		$result = $this->db->get('aviso')->result_array();
-		if ($result == null) {
-			$result['nulo']=true;
-		}
-		return $result;
+		return $this->db->get('aviso')->result_array();
 	}
-
-	public function inserirAviso($aviso)
+	public function inserir($aviso)
 	{
 		$this->db->insert("aviso", $aviso);
-		$this->session->set_flashdata("success", "Aviso inserido com successo!");
-		redirect(base_url("/aviso"));
+	}
+	public function excluir($table, $id)
+	{
+		$this->db->delete($table,array('id' => $id));
+	}
+	public function atualizar($id, $aviso)
+	{
+		$this->db->replace('aviso', $aviso);
 	}
 }
