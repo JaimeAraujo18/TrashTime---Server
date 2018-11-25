@@ -7,7 +7,6 @@ class Bairro extends CI_Controller
 		parent::__construct();
 		$this->load->model("Bairro_model");
 	}
-
 	public function index()
 	{
 		$dados['titulo']='Bairros - TrashTime';
@@ -36,7 +35,7 @@ class Bairro extends CI_Controller
 			"dia_seco1"=>$this->input->post("diaSeco1"),
 			"dia_seco2"=>$this->input->post("diaSeco2"),
 			"dia_org1"=>$this->input->post("diaOrg1"),
-			"dia_org2"=>$this->input->post("diaOrg2w"),
+			"dia_org2"=>$this->input->post("diaOrg2"),
 			"cidade_id"=>$this->input->post("cidadeID")
 		);
 		$this->Bairro_model->inserir($bairro);
@@ -58,7 +57,7 @@ class Bairro extends CI_Controller
 		$this->load->view('templates/footer', $dados);
 		$this->load->view('templates/js', $dados);
 	}
-	public function updatebairro($id)
+	public function updateBairro($id)
 	{
 		$bairro = array(
 			"id"=>$id,
@@ -66,7 +65,7 @@ class Bairro extends CI_Controller
 			"dia_seco1"=>$this->input->post("diaSeco1"),
 			"dia_seco2"=>$this->input->post("diaSeco2"),
 			"dia_org1"=>$this->input->post("diaOrg1"),
-			"dia_org2"=>$this->input->post("diaOrg2w"),
+			"dia_org2"=>$this->input->post("diaOrg2"),
 			"cidade_id"=>$this->input->post("cidadeID")
 		);
 		$this->Bairro_model->atualizar("bairro",$bairro);
