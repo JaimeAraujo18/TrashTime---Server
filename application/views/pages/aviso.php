@@ -22,7 +22,8 @@
 								<th style="width: 25%%" scope="col">Texto</th>
 								<th style="width: 8.33%" scope="col">Data início</th>
 								<th style="width: 8.33%" scope="col">Data fim</th>
-								<th style="width: 8.33%" scope="col">ID bairro</th>
+								<th style="width: 8.33%" scope="col">ID Bairro</th>
+								<th style="width: 8.33%" scope="col">ID Cidade</th>
 								<th style="width: 16.66%" scope="col">Ações</th>
 							</tr>
 						</thead>
@@ -36,6 +37,7 @@
 								<td>".dateFormat('d-m-Y',$aviso['data_inicio'])."</td>
 								<td>".dateFormat('d-m-Y',$aviso['data_fim'])."</td>
 								<td>".$aviso['bairro_id']."</td>
+								<td>".$aviso['cidade_id']."</td>
 								<td class='row' id='td'>
 									<a href='".base_url('/aviso/excluir/'.$aviso['id'])."' class='ml-3 btn btn-danger btn-sm'>Excluir</a>
 									<a href='".base_url('/aviso/editar/'.$aviso['id'])."' class='ml-4 btn btn-primary btn-sm'>Editar</a>

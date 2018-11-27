@@ -12,6 +12,7 @@
 				$aviso[0]['data_inicio']="";
 				$aviso[0]['data_fim']="";
 				$aviso[0]['bairro_id']="";
+				$aviso[0]['cidade_id']="";
 				$new="";
 			}
 		?>
@@ -38,15 +39,25 @@
 					<div class="form-group">
 						<label class="text-light" for="bairroID">Nome do bairro:</label><br>
 						<select class="col-md-12 form-controll" id="bairroID" name="bairroID" required>
-						<?php if(isset($new)){echo "<option value'null' class='col-md-12 form-controll'>Selecione um bairro</option>";}else{echo "<option value='".$bairro[0]['dia_org2']." class='col-md-12 form-controll'>Dia Atual</option>";}
+						<?php if(isset($new)){echo "<option value'null' class='col-md-12 form-controll'>Selecione um bairro</option>";}else{echo "<option value='".$bairro[0]['bairro_id']." class='col-md-12 form-controll'>Selecione um bairro</option>";}
 						foreach ($bairros as $bairro)
 						{
 							echo "<option value='".$bairro['id']."'>".$bairro['nome']."</option>";
 						}
-
 						?>
 						</select>
 					</div><br>
+					<div class="form-controll">
+						<label class="text-light" for="cidadeID">Nome da cidade:</label><br>
+						<select class="col-md-12 form-controll" id="cidadeID" name="cidadeID" required>
+						<?php if(isset($new)){echo "<option value'null' class='col-md-12 form-controll'>Selecione uma cidade</option>";}else{echo "<option value='".$bairro[0]['cidade_id']." class='col-md-12 form-controll'>Selecione uma cidade</option>";}
+						foreach ($bairros as $bairro)
+						{
+							echo "<option value='".$cidade['id']."'>".$cidade['nome']."</option>";
+						}
+						?>
+						</select>
+					</div>
 					<button type="submit" class="btn btn-danger col-md-12">Enviar</button>
 				</form>
 		<?php } ?>

@@ -15,9 +15,10 @@ $(function() {
 	});	
 	$("#formAviso").submit(function(e) {
 		var bid = $("#bairroID");
+		var cid = $("#bairroID");
 		var event= e;
 
-		if ((bid.val()=="Selecione um bairro") ) 
+		if ((bid.val()=="Selecione um bairro") || (cid.val()=="Selecione uma cidade")) 
 		{
 			event.preventDefault();
 			$("#erroAviso").removeClass('hidden');
