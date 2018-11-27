@@ -40,13 +40,13 @@
 										case 7:$dias1 = "Sábado";break;
 									}
 									switch ($bairro['dia_seco2']){
-										case 1:$dias1 = "Domingo";break;
-										case 2:$dias1 = "Segunda-Feira";break;
-										case 3:$dias1 = "Terça-Feira";break;
-										case 4:$dias1 = "Quarta-Feira";break;
-										case 5:$dias1 = "Quinta-Feira";break;
-										case 6:$dias1 = "Sexta-Feira";break;
-										case 7:$dias1 = "Sábado";break;
+										case 1:$dias2 = "Domingo";break;
+										case 2:$dias2 = "Segunda-Feira";break;
+										case 3:$dias2 = "Terça-Feira";break;
+										case 4:$dias2 = "Quarta-Feira";break;
+										case 5:$dias2 = "Quinta-Feira";break;
+										case 6:$dias2 = "Sexta-Feira";break;
+										case 7:$dias2 = "Sábado";break;
 									}
 									switch ($bairro['dia_org1']){
 										case 1:$diao1 = "Domingo";break;
@@ -74,7 +74,7 @@
 								<td>".$dias2."</td>
 								<td>".$diao1."</td>
 								<td>".$diao2."</td>
-								<td>".$bairro['cidade_id']."</td>
+								<td>".$cidade['nome']."</td>
 								<td class='row' id='td'>
 									<a href='".base_url('/bairro/excluir/'.$bairro['id'])."' class='ml-3 btn btn-danger btn-sm'>Excluir</a>
 									<a href='".base_url('/bairro/editar/'.$bairro['id'])."' class='ml-4 btn btn-primary btn-sm'>Editar</a>
