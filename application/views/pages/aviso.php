@@ -29,21 +29,33 @@
 						</thead>
 						<tbody>
 						<?php
-							foreach ($avisos as $aviso) {echo
+							foreach ($avisos as $aviso) {
+								$cidadeNome;
+								$bairroNome;
+								foreach ($bairros as $bairro){
+									if($bairro['id]==$aviso['bairro_id']){
+										$bairroNome = $bairro['nome'];
+									}
+								}
+								foreach ($cidades as $cidade){
+									if($cidade['id']==$aviso['cidade_id']){
+										$cidadeNome = $cidade['nome'];
+									}
+								}
+								echo
 							"<tr>
 								<th scope='row'>".$aviso['id']."</th>
 								<td>".character_limiter($aviso['titulo'],50)."</td>
 								<td>".character_limiter($aviso['texto'], 50)."</td>
 								<td>".dateFormat('d-m-Y',$aviso['data_inicio'])."</td>
 								<td>".dateFormat('d-m-Y',$aviso['data_fim'])."</td>
-								<td>".$aviso['bairro_id']."</td>
-								<td>".$aviso['cidade_id']."</td>
+								<td>".$bairroNome."</td>
+								<td>".$cidadeNome."</td>
 								<td class='row' id='td'>
 									<a href='".base_url('/aviso/excluir/'.$aviso['id'])."' class='ml-3 btn btn-danger btn-sm'>Excluir</a>
 									<a href='".base_url('/aviso/editar/'.$aviso['id'])."' class='ml-4 btn btn-primary btn-sm'>Editar</a>
 							    </td>
 				    		</tr>";
-				    		// $something = $this->input->get('something'); get da url
 				    	}?>
 						</tbody>
 					</table>
