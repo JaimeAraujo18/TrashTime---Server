@@ -45,8 +45,8 @@
 								echo
 							"<tr>
 								<th scope='row'>".$aviso['id']."</th>
-								<td>".character_limiter($aviso['titulo'],50)."</td>
-								<td>".character_limiter($aviso['texto'], 50)."</td>
+								<td>".character_limiter($aviso['titulo'],30)."</td>
+								<td>".character_limiter($aviso['texto'], 30)."</td>
 								<td>".dateFormat('d-m-Y',$aviso['data_inicio'])."</td>
 								<td>".dateFormat('d-m-Y',$aviso['data_fim'])."</td>
 								<td>".$bairroNome."</td>
