@@ -26,54 +26,54 @@
 						<?php
 						if (isset($bairros)) {
 							foreach ($bairros as $bairro) {
-								function diaSemana($var){
-									switch ($var['dia_seco1']){
-										case 1:$bairro['dia_seco1'] = "Domingo";break;
-										case 2:$bairro['dia_seco1'] = "Segunda-Feira";break;
-										case 3:$bairro['dia_seco1'] = "Terça-Feira";break;
-										case 4:$bairro['dia_seco1'] = "Quarta-Feira";break;
-										case 5:$bairro['dia_seco1'] = "Quinta-Feira";break;
-										case 6:$bairro['dia_seco1'] = "Sexta-Feira";break;
-										case 7:$bairro['dia_seco1'] = "Sábado";break;
+								$dias1;
+								$dias2;
+								$diao1;
+								$diao2;
+									switch ($bairro['dia_seco1']){
+										case 1:$dias1 = "Domingo";break;
+										case 2:$dias1 = "Segunda-Feira";break;
+										case 3:$dias1 = "Terça-Feira";break;
+										case 4:$dias1 = "Quarta-Feira";break;
+										case 5:$dias1 = "Quinta-Feira";break;
+										case 6:$dias1 = "Sexta-Feira";break;
+										case 7:$dias1 = "Sábado";break;
 									}
-									switch ($var['dia_seco2']){
-										case 1:$bairro['dia_seco2'] = "Domingo";break;
-										case 2:$bairro['dia_seco2'] = "Segunda-Feira";break;
-										case 3:$bairro['dia_seco2'] = "Terça-Feira";break;
-										case 4:$bairro['dia_seco2'] = "Quarta-Feira";break;
-										case 5:$bairro['dia_seco2'] = "Quinta-Feira";break;
-										case 6:$bairro['dia_seco2'] = "Sexta-Feira";break;
-										case 7:$bairro['dia_seco2'] = "Sábado";break;
+									switch ($bairro['dia_seco2']){
+										case 1:$dias1 = "Domingo";break;
+										case 2:$dias1 = "Segunda-Feira";break;
+										case 3:$dias1 = "Terça-Feira";break;
+										case 4:$dias1 = "Quarta-Feira";break;
+										case 5:$dias1 = "Quinta-Feira";break;
+										case 6:$dias1 = "Sexta-Feira";break;
+										case 7:$dias1 = "Sábado";break;
 									}
-									switch ($var['dia_org1']){
-										case 1:$bairro['dia_org1'] = "Domingo";break;
-										case 2:$bairro['dia_org1'] = "Segunda-Feira";break;
-										case 3:$bairro['dia_org1'] = "Terça-Feira";break;
-										case 4:$bairro['dia_org1'] = "Quarta-Feira";break;
-										case 5:$bairro['dia_org1'] = "Quinta-Feira";break;
-										case 6:$bairro['dia_org1'] = "Sexta-Feira";break;
-										case 7:$bairro['dia_org1'] = "Sábado";break;
+									switch ($bairro['dia_org1']){
+										case 1:$diao1 = "Domingo";break;
+										case 2:$diao1 = "Segunda-Feira";break;
+										case 3:$diao1 = "Terça-Feira";break;
+										case 4:$diao1 = "Quarta-Feira";break;
+										case 5:$diao1 = "Quinta-Feira";break;
+										case 6:$diao1 = "Sexta-Feira";break;
+										case 7:$diao1 = "Sábado";break;
 									}
-									switch ($var['dia_org2']){
-										case 1:$bairro['dia_org2'] = "Domingo";break;
-										case 2:$bairro['dia_org2'] = "Segunda-Feira";break;
-										case 3:$bairro['dia_org2'] = "Terça-Feira";break;
-										case 4:$bairro['dia_org2'] = "Quarta-Feira";break;
-										case 5:$bairro['dia_org2'] = "Quinta-Feira";break;
-										case 6:$bairro['dia_org2'] = "Sexta-Feira";break;
-										case 7:$bairro['dia_org2'] = "Sábado";break;
+									switch ($bairro['dia_org2']){
+										case 1:$diao2 = "Domingo";break;
+										case 2:$diao2 = "Segunda-Feira";break;
+										case 3:$diao2 = "Terça-Feira";break;
+										case 4:$diao2 = "Quarta-Feira";break;
+										case 5:$diao2 = "Quinta-Feira";break;
+										case 6:$diao2 = "Sexta-Feira";break;
+										case 7:$diao2 = "Sábado";break;
 									}
-								}
-								diaSemana($bairro);
-								print_r($bairro);
 								echo
 							"<tr>
 								<th scope='row'>".$bairro['id']."</th>
 								<td>".character_limiter($bairro['nome'],50)."</td>
-								<td>".$bairro['dia_seco1']."</td>
-								<td>".$bairro['dia_seco2']."</td>
-								<td>".$bairro['dia_org1']."</td>
-								<td>".$bairro['dia_org2']."</td>
+								<td>".$dias1."</td>
+								<td>".$dias2."</td>
+								<td>".$diao1."</td>
+								<td>".$diao2."</td>
 								<td>".$bairro['cidade_id']."</td>
 								<td class='row' id='td'>
 									<a href='".base_url('/bairro/excluir/'.$bairro['id'])."' class='ml-3 btn btn-danger btn-sm'>Excluir</a>
