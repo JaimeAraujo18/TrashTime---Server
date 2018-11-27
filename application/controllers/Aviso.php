@@ -12,6 +12,8 @@ class Aviso extends CI_Controller {
 	{
 		$dados['titulo']='Avisos - TrashTime';
 		$dados['avisos']=$this->Aviso_model->listarAvisos();
+		$this->load->model("Cidade_model");
+		$dados['cidades']=$this->Cidade_model->listarCidades();
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
