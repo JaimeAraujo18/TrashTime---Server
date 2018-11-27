@@ -3,7 +3,7 @@
 /**
  * 
  */
-class usuario_model extends CI_Model{
+class Usuario_model extends CI_Model{
 
 	public function logar ($username, $password)
 	{

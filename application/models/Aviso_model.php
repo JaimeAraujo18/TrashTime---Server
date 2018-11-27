@@ -3,7 +3,7 @@
 /**
  * 
  */
-class aviso_model extends CI_Model
+class Aviso_model extends CI_Model
 {
 	public function exportar($data)
 	{

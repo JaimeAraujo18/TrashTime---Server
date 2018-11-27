@@ -3,7 +3,7 @@
 /**
  * 
  */
-class cidade_model extends CI_Model
+class Cidade_model extends CI_Model
 {
 	public function listarCidades()
 	{

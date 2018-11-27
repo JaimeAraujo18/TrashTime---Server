@@ -3,7 +3,7 @@
 /**
  * 
  */
-class bairro_model extends CI_Model
+class Bairro_model extends CI_Model
 {
 	public function listarBairros()
 	{
