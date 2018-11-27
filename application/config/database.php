@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'http://trashtimewebservice-com.umbler.net/',
+	'hostname' => 'mysql995.umbler.com',
 	'username' => 'jaimearaujo18',
 	'password' => 'senhaumbler',
 	'database' => 'trashtime',
