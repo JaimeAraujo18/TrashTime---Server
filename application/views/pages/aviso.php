@@ -33,7 +33,7 @@
 								$cidadeNome;
 								$bairroNome;
 								foreach ($bairros as $bairro){
-									if($bairro['id]==$aviso['bairro_id']){
+									if($bairro['id']==$aviso['bairro_id']){
 										$bairroNome = $bairro['nome'];
 									}
 								}
