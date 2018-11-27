@@ -65,7 +65,7 @@
 									}
 								}
 								diaSemana($bairro);
-								
+								print_r($bairro);
 								echo
 							"<tr>
 								<th scope='row'>".$bairro['id']."</th>
