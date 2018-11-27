@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Aviso extends CI_Controller {
 
-	public function __construct (){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->model("Aviso_model");
 	}
-
 	public function index()
 	{
 		$dados['titulo']='Avisos - TrashTime';
@@ -21,7 +21,11 @@ class Aviso extends CI_Controller {
 	}
 	public function formAviso()
 	{
+		date_default_timezone_set('America/Sao_Paulo');
+		$dados['data']=date("Y-m-d");
+		$this->load->model("Bairro_model");
 		$dados['titulo']='Novo aviso - TrashTime';
+		$dados['bairros']=$this->Bairro_model->listarBairros();
 		
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
@@ -48,6 +52,8 @@ class Aviso extends CI_Controller {
 	}
 	public function editar($id)
 	{
+		date_default_timezone_set('America/Sao_Paulo');
+		$dados['data']=date("Y-m-d");
 		$dados['titulo']= "Editar Aviso - TrashTime";
 		$dados['aviso'] = $this->db->get_where("aviso", array ('id' => $id))->result_array();
 

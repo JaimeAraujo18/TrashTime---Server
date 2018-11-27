@@ -5,6 +5,10 @@
  */
 class Aviso_model extends CI_Model
 {
+	public function exportar($data)
+	{
+		return $this->db->query("SELECT * FROM `aviso` WHERE data_fim >= ".$data."")->result();
+	}
 	public function listarAvisos()
 	{
 		return $this->db->get('aviso')->result_array();

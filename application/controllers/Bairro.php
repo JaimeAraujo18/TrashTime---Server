@@ -21,6 +21,8 @@ class Bairro extends CI_Controller
 	public function formBairro()
 	{
 		$dados['titulo']='Adicionar bairro - TrashTime';
+		$this->load->model("Cidade_model");
+		$dados['cidades']=$this->Cidade_model->listarCidades();
 		
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
