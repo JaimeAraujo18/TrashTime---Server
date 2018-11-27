@@ -26,21 +26,45 @@
 						<?php
 						if (isset($bairros)) {
 							foreach ($bairros as $bairro) {
-								function diaSemana($var, $nome){
-									switch ($bairro[''.$nome]){
-										case 1:$bairro[''.$var] = "Domingo";break;
-										case 2:$bairro[''.$var] = "Segunda-Feira";break;
-										case 3:$bairro[''.$var] = "Terça-Feira";break;
-										case 4:$bairro[''.$var] = "Quarta-Feira";break;
-										case 5:$bairro[''.$var] = "Quinta-Feira";break;
-										case 6:$bairro[''.$var] = "Sexta-Feira";break;
-										case 7:$bairro[''.$var] = "Sábado";break;
+								function diaSemana($var){
+									switch ($var['dia_seco1']){
+										case 1:$bairro['dia_seco1'] = "Domingo";break;
+										case 2:$bairro['dia_seco1'] = "Segunda-Feira";break;
+										case 3:$bairro['dia_seco1'] = "Terça-Feira";break;
+										case 4:$bairro['dia_seco1'] = "Quarta-Feira";break;
+										case 5:$bairro['dia_seco1'] = "Quinta-Feira";break;
+										case 6:$bairro['dia_seco1'] = "Sexta-Feira";break;
+										case 7:$bairro['dia_seco1'] = "Sábado";break;
+									}
+									switch ($var['dia_seco2']){
+										case 1:$bairro['dia_seco2'] = "Domingo";break;
+										case 2:$bairro['dia_seco2'] = "Segunda-Feira";break;
+										case 3:$bairro['dia_seco2'] = "Terça-Feira";break;
+										case 4:$bairro['dia_seco2'] = "Quarta-Feira";break;
+										case 5:$bairro['dia_seco2'] = "Quinta-Feira";break;
+										case 6:$bairro['dia_seco2'] = "Sexta-Feira";break;
+										case 7:$bairro['dia_seco2'] = "Sábado";break;
+									}
+									switch ($var['dia_org1']){
+										case 1:$bairro['dia_org1'] = "Domingo";break;
+										case 2:$bairro['dia_org1'] = "Segunda-Feira";break;
+										case 3:$bairro['dia_org1'] = "Terça-Feira";break;
+										case 4:$bairro['dia_org1'] = "Quarta-Feira";break;
+										case 5:$bairro['dia_org1'] = "Quinta-Feira";break;
+										case 6:$bairro['dia_org1'] = "Sexta-Feira";break;
+										case 7:$bairro['dia_org1'] = "Sábado";break;
+									}
+									switch ($var['dia_org2']){
+										case 1:$bairro['dia_org2'] = "Domingo";break;
+										case 2:$bairro['dia_org2'] = "Segunda-Feira";break;
+										case 3:$bairro['dia_org2'] = "Terça-Feira";break;
+										case 4:$bairro['dia_org2'] = "Quarta-Feira";break;
+										case 5:$bairro['dia_org2'] = "Quinta-Feira";break;
+										case 6:$bairro['dia_org2'] = "Sexta-Feira";break;
+										case 7:$bairro['dia_org2'] = "Sábado";break;
 									}
 								}
-								diaSemana($bairro['dia_seco1'], "dia_seco1");
-								diaSemana($bairro['dia_seco2'], "dia_seco2");
-								diaSemana($bairro['dia_org1'], "dia_org1");
-								diaSemana($bairro['dia_org2'], "dia_org2");
+								diaSemana($bairro);
 								
 								echo
 							"<tr>
