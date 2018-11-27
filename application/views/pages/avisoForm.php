@@ -46,7 +46,7 @@
 						}
 						?>
 						</select>
-					</div><br>
+					</div>
 					<div class="form-controll">
 						<label class="text-light" for="cidadeID">Nome da cidade:</label><br>
 						<select class="col-md-12 form-controll" id="cidadeID" name="cidadeID" required>
@@ -57,7 +57,7 @@
 						}
 						?>
 						</select>
-					</div>
+					</div><br>
 					<button type="submit" class="btn btn-danger col-md-12">Enviar</button>
 				</form>
 		<?php } ?>
