@@ -11,6 +11,8 @@ class Bairro extends CI_Controller
 	{
 		$dados['titulo']='Bairros - TrashTime';
 		$dados['bairros']=$this->Bairro_model->listarBairros();
+		$this->load->model("Cidade_model");
+		$dados['cidades'] = $this->Cidade_model->listarCidades();
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
