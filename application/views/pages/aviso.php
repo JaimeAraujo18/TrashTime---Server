@@ -20,10 +20,10 @@
 								<th style="width: 8.33%" scope="col">ID</th>
 								<th style="width: 16.66%" scope="col">Título</th>
 								<th style="width: 25%%" scope="col">Texto</th>
-								<th style="width: 8.33%" scope="col">Data início</th>
-								<th style="width: 8.33%" scope="col">Data fim</th>
-								<th style="width: 8.33%" scope="col">ID Bairro</th>
-								<th style="width: 8.33%" scope="col">ID Cidade</th>
+								<th style="width: 9%" scope="col">Data início</th>
+								<th style="width: 9%" scope="col">Data fim</th>
+								<th style="width: 8.33%" scope="col">Bairro</th>
+								<th style="width: 8.33%" scope="col">Cidade</th>
 								<th style="width: 16.66%" scope="col">Ações</th>
 							</tr>
 						</thead>
