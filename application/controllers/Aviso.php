@@ -10,11 +10,15 @@ class Aviso extends CI_Controller {
 	}
 	public function index()
 	{
-		$dados['titulo']='Avisos - TrashTime';
-		$dados['avisos']=$this->Aviso_model->listarAvisos();
 		$this->load->model("Cidade_model");
+		$this->load->model("Bairro_model");
+		
+		$dados['avisos']=$this->Aviso_model->listarAvisos();
+		$dados['bairros']=$this->Bairro_model->listarBairros();
 		$dados['cidades']=$this->Cidade_model->listarCidades();
-
+		
+		$dados['titulo']='Avisos - TrashTime';
+		
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
 		$this->load->view('pages/aviso', $dados);
