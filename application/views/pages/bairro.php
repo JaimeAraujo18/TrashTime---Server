@@ -25,7 +25,24 @@
 						<tbody>
 						<?php
 						if (isset($bairros)) {
-							foreach ($bairros as $bairro) {echo
+							foreach ($bairros as $bairro) {
+								function diaSemana($var, $nome){
+									switch ($bairro[''.$nome]){
+										case 1:$bairro[''.var] = "Domingo";break;
+										case 2:$bairro[''.var] = "Segunda-Feira";break;
+										case 3:$bairro[''.var] = "Terça-Feira";break;
+										case 4:$bairro[''.var] = "Quarta-Feira";break;
+										case 5:$bairro[''.var] = "Quinta-Feira";break;
+										case 6:$bairro[''.var] = "Sexta-Feira";break;
+										case 7:$bairro[''.var] = "Sábado";break;
+									}
+								}
+								diaSemana($bairro['dia_seco1'], "dia_seco1");
+								diaSemana($bairro['dia_seco2'], "dia_seco2");
+								diaSemana($bairro['dia_org1'], "dia_org1");
+								diaSemana($bairro['dia_org2'], "dia_org2");
+								
+								echo
 							"<tr>
 								<th scope='row'>".$bairro['id']."</th>
 								<td>".character_limiter($bairro['nome'],50)."</td>
