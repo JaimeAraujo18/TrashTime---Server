@@ -1,10 +1,11 @@
 <?php
-header('Access-Control-Allow-Origin:*');
-header('Access-Control-Allow-Credentials: true');
+
 class Export extends CI_Controller
 {
 	public function __construct()
 	{
+		header('Access-Control-Allow-Origin:*');
+		header('Access-Control-Allow-Credentials: true');
 		parent::__construct();
 	}
 	public function index()
