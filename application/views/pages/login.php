@@ -6,7 +6,7 @@
 					redirect(base_url("/home"));
 				}
 				if($this->session->flashdata('danger')){
-					echo "<div class='alert alert-danger text-light'><p>Usuiario e/ou senha incorretos!</p></div>";
+					echo "<div class='alert alert-danger text-dark '>Usuiario e/ou senha incorretos!</div>";
 				}
 			?>
 		</div>
