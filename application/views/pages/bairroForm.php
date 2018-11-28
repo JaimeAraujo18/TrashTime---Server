@@ -17,7 +17,7 @@
 				}
 			?>
 				<h2 class="text-light display-4">Cadastro de Bairro:</h2>
-				<div id="erroBairro" class="hidden col-md-12 alert alert-danger">Selecione opções válidas</div>
+			<div id="erroBairro" class="hidden col-md-12 alert alert-danger"><p>Selecione opções válidas</p></div>
 				<hr class="my-4 bg-light">
 				<form id="formBairro" action="<?php if(isset($new)){echo base_url('/bairro/novoBairro');}else{echo base_url('/bairro/updateBairro/'.$bairro[0]['id']);} ?>" method="post">
 					<div class="form-group">
