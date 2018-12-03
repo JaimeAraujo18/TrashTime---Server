@@ -61,6 +61,8 @@ class Aviso extends CI_Controller {
 	public function editar($id)
 	{
 		date_default_timezone_set('America/Sao_Paulo');
+		$this->load->model("Cidade_model");
+		$dados['cidades']=$this->Cidade_model->listarCidades();
 		$dados['data']=date("Y-m-d");
 		$dados['titulo']= "Editar Aviso - TrashTime";
 		$dados['aviso'] = $this->db->get_where("aviso", array ('id' => $id))->result_array();
