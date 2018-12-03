@@ -32,6 +32,10 @@ class Export extends CI_Controller
 		$this->load->model("Bairro_model");
 		$this->load->model("Cidade_model");
 		
+		$da['titulo']='Export - TrashTime';
+		
+		$this->load->view('templates/header', $da);
+		
 		$dados['avisos']=$this->Aviso_model->Exportar($data);
 		$dados['bairros']=$this->Bairro_model->listarBairros();
 		$dados['cidades']=$this->Cidade_model->listarCidades();
