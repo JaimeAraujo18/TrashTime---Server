@@ -36,17 +36,6 @@
 						<label class="text-light" for="dataFim">Data de Término:</label><br>
 						<input type="date" class="form-controll col-md-12" id="dataFim" name="dataFim" min="<?= $data ?>" placeholder="dd/mm/aaaa" required value="<?= $aviso[0]['data_fim'] ?>">
 					</div>
-					<div class="form-group">
-						<label class="text-light" for="bairroID">Nome do bairro:</label><br>
-						<select class="col-md-12 form-controll" id="bairroID" name="bairroID" required>
-						<?php if(isset($new)){echo "<option value'null' class='col-md-12 form-controll'>Selecione um bairro</option>";}else{echo "<option value='".$bairro[0]['bairro_id']." class='col-md-12 form-controll'>Selecione um bairro</option>";}
-						foreach ($bairros as $bairro)
-						{
-							echo "<option value='".$bairro['id']."'>".$bairro['nome']."</option>";
-						}
-						?>
-						</select>
-					</div>
 					<div class="form-controll">
 						<label class="text-light" for="cidadeID">Nome da cidade:</label><br>
 						<select class="col-md-12 form-controll" id="cidadeID" name="cidadeID" required>
@@ -54,6 +43,17 @@
 						foreach ($cidades as $cidade)
 						{
 							echo "<option value='".$cidade['id']."'>".$cidade['nome']."</option>";
+						}
+						?>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="text-light" for="bairroID">Nome do bairro:</label><br>
+						<select class="col-md-12 form-controll" id="bairroID" name="bairroID" required>
+						<?php if(isset($new)){echo "<option value'null' class='col-md-12 form-controll'>Selecione um bairro</option>";}else{echo "<option value='".$bairro[0]['bairro_id']." class='col-md-12 form-controll'>Selecione um bairro</option>";}
+						foreach ($bairros as $bairro)
+						{
+							echo "<option class='cid-".$bairro['cidade_id']."' value='".$bairro['id']."'>".$bairro['nome']."</option>";
 						}
 						?>
 						</select>
