@@ -53,7 +53,9 @@ class Bairro extends CI_Controller
 	public function editar($id)
 	{
 		$dados['titulo']= "Editar bairro - TrashTime";
+		$this->load->model("Cidade_model");
 		$dados['bairro'] = $this->db->get_where("bairro", array ('id' => $id))->result_array();
+		$dados['cidades']=$this->Cidade_model->listarCidades();
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
