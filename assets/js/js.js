@@ -1,7 +1,7 @@
 $(function() {
 	
 	$("#cidadeID").change(function() {
-		console.log($("option .cid-"));
+		
 	});
 	
 	$("#formBairro").submit(function(e) {
