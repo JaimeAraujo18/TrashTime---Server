@@ -1,5 +1,9 @@
 $(function() {
-
+	
+	$("#cidadeID").change(function() {
+		console.log($("option. cid-"));
+	});
+	
 	$("#formBairro").submit(function(e) {
 		var ds1 = $("#diaSeco1");
 		var ds2 = $("#diaSeco2");
