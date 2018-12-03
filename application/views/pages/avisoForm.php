@@ -51,7 +51,7 @@
 						<label class="text-light" for="cidadeID">Nome da cidade:</label><br>
 						<select class="col-md-12 form-controll" id="cidadeID" name="cidadeID" required>
 						<?php if(isset($new)){echo "<option value'null' class='col-md-12 form-controll'>Selecione uma cidade</option>";}else{echo "<option value='".$bairro[0]['cidade_id']." class='col-md-12 form-controll'>Selecione uma cidade</option>";}
-						foreach ($bairros as $bairro)
+						foreach ($cidades as $cidade)
 						{
 							echo "<option value='".$cidade['id']."'>".$cidade['nome']."</option>";
 						}
